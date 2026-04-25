@@ -1,0 +1,185 @@
+create database EMPRESA;
+USE EMPRESA;
+CREATE TABLE EMPREGADOS (
+CODIGOEMP INT AUTO_INCREMENT PRIMARY KEY,
+DEPARTAMENTO int references DEPARTAMENTO (NOMEDEP),
+NOMEEMP VARCHAR (50),
+SOBRENOMEEMP VARCHAR(50),
+DEPARTAMENTO VARCHAR(100),
+TELEFONEEMP VARCHAR(20),
+DATAADMISSAOEMP DATETIME,
+CARGOEMP VARCHAR(100),
+FORMACAOEMP VARCHAR(100),
+SEXOEMP VARCHAR(10),
+DATANASCIMENTOEMP DATETIME);
+
+CREATE TABLE DEPARTAMENTO (
+CODIGODEP INT auto_increment PRIMARY KEY,
+NOMEDEP VARCHAR(100),
+NOMEGERENTE VARCHAR(100));
+
+CREATE TABLE PROJETO (
+CODIGOPRO INT auto_increment PRIMARY KEY,
+DEPARTAMENTO int references DEPARTAMENTO (NOMEDEP),
+NOMEPRO VARCHAR(100),
+RESPONSAVEL VARCHAR(100),
+numEQUIPE VARCHAR(100),
+DATAINICIO DATETIME,
+DATAFIM DATETIME);
+    
+CREATE TABLE CLIENTE (
+CODCLIENTE INT auto_increment PRIMARY KEY,
+PROJETO int references PROJETO (CODIGOPRO)
+NOMECLI VARCHAR(50),
+SOBRENOMECLI VARCHAR(50),
+ENDERECOCLI VARCHAR(100),
+CIDADECLI VARCHAR(100),
+ESTADOCLI VARCHAR(100),
+CEPCLI VARCHAR(100),
+RGCLI VARCHAR(100),
+CPFCLI VARCHAR(100),
+DATANASCIMENTOCLI DATETIME,
+TELEFONECLI VARCHAR(15),
+SEXOCLI VARCHAR(10),
+EMAILCLI VARCHAR(100));
+
+insert INTO EMPREGADOS (
+NOMEEMP,
+SOBRENOMEEMP,
+Departamento,
+TELEFONEEMP,
+DATAADMISSAOEMP,
+CARGOEMP,
+FORMACAOEMP,
+SEXOEMP,
+DATANASCIMENTOEMP )
+VALUES
+('Gabriel','Gomes','Setor operacional','12 92156-6522','20060321','Programador','Ensino Médio','Masculino','19800306'),
+('Lana','Sauro','Comercial','12 981067523','20050612','Atendente','Ensino Médio','Feminino','20000615'),
+('Fernando','Franco','Administrativo','12 963256542','20040916','Assistente','Ensino Médio','Masculino','19800904'),
+('Francisca','Juniar','Recursos Humanos','12 954265458','20040615','Faxineira','Ensino Superior','Feminino','20000607'),
+('João','Vitor','Financeiro','12 659585623','20000923','Contador','Ensino Superior','Masculino','19800615');
+
+ insert INTO DEPARTAMENTO (
+NOMEDEP,
+NOMEGERENTE )
+VALUES
+('Comercial','Claudia Santos'),
+('Recursos Humanos','Paulo Junior'),
+('Administração','Vanessa Anjos'),
+('Financeiro','Lucio Fernandes'),
+('Setor operacional','Neymar Moura');
+
+
+
+insert into PROJETO (
+NOMEPRO,
+RESPONSAVEL,
+numEQUIPE,
+DATAINICIO,
+DATAFIM)
+VALUES
+('Recursos Humanos','Organização de documentos','José Silva','567','200200612','20221212'),
+('Financeiro','Aumento da economia','Leticia Souza','426','20190101','20220615'),
+('Setor operacional','Ideias inovadoras','Thayna Soares','555','20180103','20191205'),
+('Comercial','Publicidade','Cauã Andrade','321','20201025','20211220'),
+('Administração','Aumento da produtividade','Bianca Braga','512','20200615','20211216');
+
+insert into CLIENTE (
+NOMECLI,
+SOBRENOMECLI,
+ENDERECOCLI,
+CIDADECLI,
+ESTADOCLI,
+CEPCLI,
+RGCLI,
+CPFCLI,
+DATANASCIMENTOCLI,
+TELEFONECLI,
+SEXOCLI,
+EMAILCLI)
+VALUES
+(1,'José','Nascimento','Rua dos Pinheiros 902','SP','12625542','54.458.743-5','152.652.632-70','20010815','12 96535-2516','Masculino',
+'zezin@gmail.com'),
+(2,'Ilda','Pinto','Rua Sagui 12','MG','18651252','63.615.625-0','253.696.645-24','19950615','12 95841-5264','Feminino','il@outlook.com'),
+(3,'Bruce','Alves','Rua Quinze 90','SC','14265356','96.695.325-9','265.456.978-85','19901205','12 96583-9542','Masculino','Hulk@email.com'),
+(4,'Ruan','Marce','Rua Aqua 30','RJ','16256958','45.659.965-8','321.654.856-96','20000426','12 9653625684','Masculino','Ruanito@hotmail.com'),
+(5,'Alex','Guimas','Rua Paco 161','BA','15625357','96.654.365-7','961.652.659-75','19900226','12 48487-8423','Masculino','Alek@yahoo.com');
+
+select NOMECLI, SOBRENOMEEMP, TELEFONEEMP
+from EMPREGADOS;
+
+select NOMECLI, SEXOCLI
+From CLIENTE;
+
+select
+CODIGOEMP, NOMEEMP, SOBRENOMEEMP, NOMEDEP
+from EMPREGADOS, DEPARTAMENTO
+where
+DEPARTAMENTO = CODIGODEP;
+
+select RESPONSAVEL, numEQUIPE, DATAFIM
+From PROJETO;
+
+UPDATE
+EMPREGADOS
+set 
+NOMEEMP = 'Nichollas'
+SOBRENOMEEMP = 'Soares'
+Departamento = 'Setor operacional'
+TELEFONEEMP = '12 98852-8483'
+DATAADMISSAOEMP = '20110423'
+CARGOEMP = 'Auxiliar administrativo'
+FORMACAOEMP = 'Ensino Superior'
+SEXOEMP = 'Masculino'
+DATANASCIMENTOEMP = '19801217'
+Where 
+CODIGOEMP = 3;
+
+UPDATE 
+CLIENTE
+set
+CODCLIENTE = '6'
+where
+CODCLIENTE = 1;
+
+UPDATE 
+CLIENTE
+set
+CODCLIENTE = '7'
+where
+CODCLIENTE = 2;
+
+UPDATE 
+CLIENTE
+set
+CODCLIENTE = '8'
+where
+CODCLIENTE = 3;
+
+UPDATE 
+CLIENTE
+set
+CODCLIENTE = '9'
+where
+CODCLIENTE = 4;
+
+UPDATE 
+CLIENTE
+set
+CODCLIENTE = '10'
+where
+CODCLIENTE =  5;
+
+
+
+ 
+
+
+
+
+
+   
+
+
+	
