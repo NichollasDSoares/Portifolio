@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agnes</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo-favicon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/442be68600.js" crossorigin="anonymous"></script>
+    <!-- Progress Bar -->
+    <script src="components/js/progressbar.js"></script>
+    <!-- Parallax -->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <link rel="stylesheet" href="components/css/styles.css">
+</head>
+
+<body id="index">
+    <!-- Header Start -->
+    <nav class="navbar navbar-expand-lg position-absolute top-0 py-3 py-lg-3 px-lg-5 col-12">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img id="logo" src="assets/logo-agnes-final-branca.png" alt="Logo Agnes">
+            </a>
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header" data-bs-theme="dark">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        <img id="logo" src="assets/logo-agnes-final-branca.png" alt="Logo Agnes">
+                    </h5>
+                    <button type="button" class='btn-close data-bs-theme="dark"' data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center fixed flex-grow-1 pe-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mx-lg-2 fs-4" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Produtos
+                            </a>
+                            <ul class="dropdown-menu" data-bs-theme="dark">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Anothection</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 fs-4" aria-current="page" href="#">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 fs-4" href="#">Fazer Login</a>
+                        </li>
+                    </ul>
+                    <a href="#" id="index" class="login-button fs-4 btn btn-outline rounded-pill">Cadastre-se</a>
+                </div>
+            </div>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- Header End-->
+    <!-- Title -->
+    <div class="container-fluid container-title">
+        <div class="row content">
+            <div class="col-lg-4 col-md-5 col-sm-12">
+                <h1 class="text-white">Conheça o AGNES</h1>
+                <h2 class="text-white marker-text">Um website feito para <span class="underline-text">facilitar</span> a vida de web designers.</h2>
+                <p class="fs-5 text-white">Com o uso da inteligência artificial, essa ferramenta promete ser
+                    útil, <span class="bold-text">fácil de utilizar para programadores</span>, além de otimizar um grande tempo
+                    de desenvolvimento. Essa tecnologia te dá possibilidade de arrastar elementos
+                    <span class="bold-text">do jeito que você preferir</span>, e utilizar o código durante e após o desenvolvimento.
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 justify-content-center">
+                <img src="assets/bg-laptop.png" alt="Laptop" class="img-laptop">
+            </div>
+            <div class="col-lg-4 col-md-3"></div>
+            <a href="login.html"><button class="rounded-pill btn-start">COMECE AQUI</button></a>
+        </div>
+    </div>
+    </div>
+    <!-- Title End -->
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div id="contact-area">
+            <div class="container-fluid text-white justify-content-center">
+                <div class="row">
+                    <div class="col-md-4 contact-box fs-5">
+                        <h6><span class="contact-tile fs-5">Redes Sociais</span></h6>
+                        <a href="https://www.instagram.com/gustavo.juc/" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/gustavo.juc/" class="text-white"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/gustavo.juc/" class="text-white"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div class="col-md-4 contact-box">
+                        <h6><span class="contact-tile fs-5">Contato</span></h6>
+                        <p class="contact-tile fs-6">
+                        alinec2506@gmail.com<br>
+                        salgado.juc@gmail.com<br>
+                        eloah.rs01@gmail.com<br>
+                        nichollassd.soares@gmail.com</p>
+                    </div>
+                    <div class="col-md-4 contact-box fs-5">
+                        <h6><span class="contact-tile fs-5">Apoio</span></h6>
+                        <img src="/assets/etec-logo.png" alt="Logo da Etec" class="img-support">
+                        <img src="/assets/cps-logo.png" alt="Logo da Etec" class="img-support">
+                        <img src="/assets/sp-logo.png" alt="Logo da Etec" class="img-support">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script defer src="js/script.js"></script>
+</body>
+
+</html>
